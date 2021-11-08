@@ -9,16 +9,16 @@ public class Main {
         Random r = new Random();
 
         // Game variables
-        String[] enemies = {"Your tax accountant", "Your mother in law", "crack addict", "the stripper that you own money to"};
+        String[] enemies = {"Your tax accountant ", "Your mother in law ", "crack addict ", "the stripper that you own money to "};
         int maxEnemyHealth = 100;
-        int enemyAttackDamage = 50;
+        int enemyAttackDamage = 65;
 
         //player
         int health = 100;
-        int attackDamage = 50;
+        int attackDamage = 30;
         int numHealthCoffee = 3;
         int healthCoffeeHealAmount = 30;
-        int healthCoffeeDropChange = 50; // Percentage
+        int healthCoffeeDropChange = 25; // Percentage
 
         boolean running = true;
 
@@ -34,6 +34,7 @@ public class Main {
             System.out.println("As you got out of your car to work ");
             System.out.println("\t# " + enemy + "appeared! #\n");
 
+
             while (enemyHealth > 0) {
                 System.out.println("\tYour HP: " + health);
                 System.out.println("\t" + enemy + "'s HP: " + enemyHealth);
@@ -43,7 +44,7 @@ public class Main {
                 System.out.println("\t3. Run, forest, run!");
 
 
-                String input = in.nextLine();
+                String input = scanner.nextLine();
                 if (input.equals("1")) {
                     int damageDealt = r.nextInt(attackDamage);
                     int damageTaken = r.nextInt(enemyAttackDamage);
@@ -52,7 +53,7 @@ public class Main {
                     health -= damageTaken;
 
                     System.out.println("\t> You strike the " + enemy + " for " + damageDealt + "damage.");
-                    System.out.println("\t> You lost: " + damageTaken + " they broke your nose and rib!");
+                    System.out.println("\t> You lost hp: " + damageTaken + ", they broke your nose and rib!");
 
                     if (health < 1) {
                         System.out.println("\t> You have taken too much damage, you are gonna bleed to death! You need coffee!.");
@@ -96,11 +97,11 @@ public class Main {
             System.out.println("2. Try to leave for work!");
 
 
-            String input = in.nextLine();
+            String input = scanner.nextLine();
 
             while(!input.equals("!") && !input.equals("2")){
                 System.out.println("Invalid command, jerk!");
-                input = in.nextLine();
+                input = scanner.nextLine();
             }
 
             if(input.equals("1")) {
