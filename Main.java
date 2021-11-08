@@ -1,17 +1,16 @@
-package com.company;
-
 import java.util.Random;
 import java.util.Scanner;
 
-public class main {
-    public main(String[] args) {
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         // System Objects
         Scanner in = new Scanner(System.in);
         Random r = new Random();
 
         // Game variables
-        String[] enemies = { "Skeleton", "Zombie", "Warrior", "Assassin" };
+        String[] enemies = {"Skeleton", "Zombie", "Warrior", "Assassin"};
         int maxEnemyHealth = 75;
         int enemyAttackDamage = 25;
 
@@ -28,7 +27,7 @@ public class main {
 
         GAME:
 
-        while(running) {
+        while (running) {
             System.out.println("-------------------------------------------------");
 
             int enemyHealth = r.nextInt(maxEnemyHealth);
@@ -59,14 +58,13 @@ public class main {
                         break;
                     }
                 } else if (input.equals("2")) {
-                    if(numHealthPotions > 0) {
+                    if (numHealthPotions > 0) {
                         health += healthPotionHealAmount;
                         numHealthPotions--;
                         System.out.println("\t> You drink a health potion, healing yourself for " + healthPotionHealAmount + "."
                                 + "\n\t> You have now " + health + " HP."
                                 + "\n\t> You have " + numHealthPotions + " health potions left.\n");
-                    }
-                    else {
+                    } else {
                         System.out.println("\t> You have no health potions left! Defeat enemies for chance to get one!\n");
                     }
 
@@ -81,7 +79,7 @@ public class main {
                 }
             }
 
-            if(health >1) {
+            if (health > 1) {
                 System.out.println("You limp out from the dungeon, weak from battle");
                 break;
             }
@@ -89,13 +87,14 @@ public class main {
             System.out.println("-------------------------------------------------");
             System.out.println(" # " + enemy + " was defeated! #");
             System.out.println(" # You have " + health + "HP left. #");
-            if(r.nextInt(100) < healthPotionDropChange) {
+            if (r.nextInt(100) < healthPotionDropChange) {
                 numHealthPotions++;
-                System.out.println(" # The " + enemy + " dropped a health potion! #" );
+                System.out.println(" # The " + enemy + " dropped a health potion! #");
                 System.out.println(" # You have " + numHealthPotions + "health potions(s). # ");
             }
 
         }
+
 
     }
 }
