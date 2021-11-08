@@ -92,9 +92,31 @@ class Main {
                 System.out.println(" # The " + enemy + " dropped a health potion! #");
                 System.out.println(" # You have " + numHealthPotions + "health potions(s). # ");
             }
+            System.out.println("-------------------------------------------------");
+            System.out.println("What would you like to do now?");
+            System.out.println("1. Continue fighting");
+            System.out.println("2. Exit dungeon");
 
+            String input = in.nextLine(); 
+
+            while(!input.equals("!") && !input.equals("2")){
+                System.out.println("Invalid command, jerk!");
+                input = in.nextLine();
+            }
+
+            if(input.equals("1")) {
+                System.out.println("You continue on your Adventure!");
+            }
+            else if(input.equals("2")) {
+                System.out.println("You exit the dungeon, successful from your adventures!");
+                break;
+            }
         }
-
+        System.out.println("################");
+        System.out.println("# THANKS FOR PLAYING #");
+        System.out.println("################");
 
     }
 }
+
+    
