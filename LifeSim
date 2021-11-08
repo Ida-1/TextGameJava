@@ -70,7 +70,7 @@ public class Main {
                         System.out.println("\t> You have no coffee left! Defeat your enemies to steal some!\n");
                     }
                 } else if (input.equals("3")) {
-                    System.out.println("\tYou run like there's no tomorrow " + enemy + "!");
+                    System.out.println("\tYou run like there's no tomorrow, and " + enemy + " has too short legs to run after you. You escaped!");
                     continue GAME;
 
                 } else {
@@ -100,7 +100,7 @@ public class Main {
             String input = scanner.nextLine();
 
             while(!input.equals("!") && !input.equals("2")){
-                System.out.println("Invalid command, jerk!");
+                System.out.println("HA HA, you got killed by a " + enemy );
                 input = scanner.nextLine();
             }
 
