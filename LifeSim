@@ -24,7 +24,7 @@ public class Main {
 
         System.out.println("Good Morning Sunshine, ready for another morning?");
 
-        Game:
+        GAME:
 
         while (running) {
             System.out.println("-------------------------------------------------");
