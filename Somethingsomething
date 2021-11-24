@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class Game {
+
+    Scanner scan;
+
+    int playerHp;
+    int choice;
+
+    String name;
+    String playerWep;
+
+    public static void main(String[] args) {
+
+        Game start;
+        start = new Game();
+        start.playerSetUp();
+        start.tavern();
+    }
+
+    public void playerSetUp(){
+
+        playerHp = 10;
+        playerWep = "dirty underpants";
+
+        System.out.println("---------------------------------------------------------------------------------------------");
+        System.out.println("Your stats: ");
+        System.out.println("Your hp: " + playerHp);
+        System.out.println("You are carrying: " + playerWep);
+        System.out.println("---------------------------------------------------------------------------------------------");
+
+
+        scan = new Scanner(System.in);
+
+        System.out.println("What is thy name, horse feces?");
+        System.out.println("");
+
+        name = scan.nextLine();
+
+        System.out.println("");
+        System.out.println("Oh really, " + name + ". how ghastly of your mama and papa- to curse thee with thy name!");
+        System.out.println("There are naught one reason to stand and mope around, " + name + ". We shall start thy game!");
+        System.out.println("---------------------------------------------------------------------------------------------");
+
+    }
+
+    public void tavern(){
+
+        System.out.println("");
+        System.out.println("You are standing outside of the gates outside of the town. Two guards stands in front of the entrance.");
+        System.out.println("The two guards looks at you, disgusted. Doesn't seem like their letting you in.");
+        System.out.println("");
+        System.out.println("What will you do?");
+        System.out.println("");
+        System.out.println("1: telling them a joke");
+        System.out.println("2: try to attack the guards!");
+        System.out.println("3: Run like the weak feces, that you are.");
+        System.out.println("");
+
+        choice = scan.nextInt();
+
+        if(choice==1){
+            System.out.println(name + ": Why was the court jester almost executed? Because the Queen got the joke at the last moment!" +
+                    " The guards laughed at your joke, but judged you for your lack of intelligence. They let you pass.");
+        }
+        if (choice==2){
+            System.out.println("");
+        }
+    }
+}
+
