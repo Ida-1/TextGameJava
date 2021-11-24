@@ -1,0 +1,36 @@
+//import java.util.Random;
+
+public class Game {
+    public static void main(String[]args) {
+
+        //String[] MyWeapon = {"frying pan", "snapped lance", "a reverse Uno card", "an old used peg-leg", "dirty underwear"};
+        String MyWeapon;
+        String myClothes;
+        MyWeapon = "Rusty sword";
+        myClothes = "dirty clothes, covered in urine";
+
+        System.out.println("------------------------------------------------------------------------------------------");
+        System.out.println("You wake up in the barn. You smell icky, and feel nauseous. What happened last night? " +
+                            "You check your pockets. And nothing. Where is my money? My armour? My Sword?");
+        System.out.println(" You see an object in the corner, and takes it! " + "You are now carrying a " + MyWeapon + "!");
+        System.out.println("Your armor is stolen. You are currently wearing " + myClothes + ". Ew. ");
+
+
+        int yourHP;
+        yourHP = 10;
+
+        System.out.println("Your health is dangerous low, and you are still drunk. Your HP is " + yourHP);
+        System.out.println("-------------------------------------------------------------------------------------------");
+        System.out.println("The local working lady jumps from the roof, and lands on your chest. " +
+                "She screams at you, saying that you own her money! She quickly jumps on the roof again and disappears! ");
+
+        yourHP = yourHP - 4;
+
+        System.out.println("You cough blood and feel even worse now. Your HP is currently " + yourHP);
+        System.out.println("You finally get up, and looks at the roof of the barn, worried she might return." +
+                "You start walking wobbly, on your merry way. Trying to get far far away from scary working ladies!" );
+        System.out.println("-------------------------------------------------------------------------------------------");
+
+        
+    }
+}
