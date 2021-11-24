@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Game {
+    public static void main(String[]args) {
+        Scanner scan = new Scanner(System.in);
+
+        String playerName;
+
+        System.out.println("---------------------------------------------------------------------------------------------");
+        System.out.println("What is thy name, horse feces?");
+
+        playerName = scan.nextLine();
+
+        System.out.println("Oh really, " + playerName + ". how ghastly of your mama and papa- to curse thee with thy name!");
+    }
+}
