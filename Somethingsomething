@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Game {
 
-    Scanner scan;
+    Scanner scan = new Scanner(System.in);
+    Scanner enterScan = new Scanner(System.in);
 
     int playerHp;
     int choice;
@@ -20,7 +21,7 @@ public class Game {
 
     public void playerSetUp(){
 
-        playerHp = 10;
+        playerHp = 50;
         playerWep = "dirty underpants";
 
         System.out.println("---------------------------------------------------------------------------------------------");
@@ -28,9 +29,6 @@ public class Game {
         System.out.println("Your hp: " + playerHp);
         System.out.println("You are carrying: " + playerWep);
         System.out.println("---------------------------------------------------------------------------------------------");
-
-
-        scan = new Scanner(System.in);
 
         System.out.println("What is thy name, horse feces?");
         System.out.println("");
@@ -49,12 +47,13 @@ public class Game {
         System.out.println("");
         System.out.println("You are standing outside of the gates outside of the town. Two guards stands in front of the entrance.");
         System.out.println("The two guards looks at you, disgusted. Doesn't seem like their letting you in.");
+        System.out.println("Guard: Hello there. Is that your face posted on that wanted sign? Your name is " + name + " right?");
         System.out.println("");
         System.out.println("What will you do?");
         System.out.println("");
         System.out.println("1: telling them a joke");
         System.out.println("2: try to attack the guards!");
-        System.out.println("3: Run like the weak feces, that you are.");
+        System.out.println("3: Run like the hedge-born, that you are.");
         System.out.println("");
 
         choice = scan.nextInt();
@@ -64,7 +63,24 @@ public class Game {
                     " The guards laughed at your joke, but judged you for your lack of intelligence. They let you pass.");
         }
         if (choice==2){
+            System.out.println("You pull out your " + playerWep + ". " + name +": I will take you both o-");
+            System.out.println("you were sliced by the guard before you could finished your sentence.");
             System.out.println("");
+            System.out.println(name + " died. Try again.");
+            enterScan.nextLine();
+            tavern();
+        }
+        if (choice==3){
+            playerHp = playerHp - 10;
+            System.out.println("You panicked and started to run. " +
+                    "You were so blind by your own fear that you got run over by a carriage" +
+                    "you lost 10 hp, but you survived.");
+            System.out.println("");
+            System.out.println("---------------------------------------------------------------------------------------------");
+            System.out.println("your current stats:");
+            System.out.println("Your hp: " + playerHp);
+            System.out.println("You are carrying: " + playerWep);
+            System.out.println("---------------------------------------------------------------------------------------------");
         }
     }
 }
