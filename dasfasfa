@@ -1,0 +1,24 @@
+public class Game {
+    public static void main(String[]args) {
+
+    }
+
+    public void playerSetUp(){
+
+        String name;
+        name = "shit tit";
+
+        String playerWep;
+        playerWep = "dirty underwear";
+
+        String clothes;
+        clothes = "teeny weeny yellow stringy polka dotty bikini";
+
+        int playerHp;
+        playerHp = 3;
+
+        System.out.println(name + " woke up with " + playerHp + "hp. Got dressed in " + name + " favorite outfit, a " + clothes + " ." +
+                name + "grabbed their favorite weapon. " + name + " is now carrying a " + playerWep);
+
+    }
+}
