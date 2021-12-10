@@ -1,0 +1,23 @@
+public class Enemy {
+
+    String name;
+    int health;
+    int damage;
+
+    public Enemy(String name, int health, int damage) {
+        this.name = name;
+        this.health = health;
+        this.damage = damage;
+    }
+
+    public static void main(String[] args) {
+        Enemy enemyCurtis = new Enemy("Curtis", 45, 20);
+        Enemy enemyMother = new Enemy("Mother", 15, 0);
+        Enemy enemyKai = new Enemy("Kai", 100, 30);
+        Enemy enemyHank = new Enemy("Hank", 50, 60);
+        Enemy enemyPrudence = new Enemy("Prudence", 100, 10);
+        Enemy enemyRebekka = new Enemy("Rebekka", 80, 60);
+        */
+    }
+}
+
