@@ -1,19 +1,22 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        // Her åpner vi filen "test.txt"
         File file = new File("test.txt");
 
-        // Her lager vi en ny scanner, som vi bruker til å scanne igjennom filen
         Scanner scanner = new Scanner(file);
 
-        // Så lenge som det er igjen linjer i filen
-        while(scanner.hasNext()) {
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
 
-            // Les neste linje inn i "line"
-            String line = scanner.next();
-
-            // Print ut line
             System.out.println(line);
         }
+        String myString = "";
+        while (scanner.hasNextLine()) {
+            // Lest neste linje inn i variabelen line
+            String line = scanner.nextLine();
+            // Legg til line på slutten av myString
+
+        }
     }
-  
+}
